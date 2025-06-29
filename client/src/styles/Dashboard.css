@@ -1,0 +1,242 @@
+.dashboard-root {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #181c23;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+body, html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.sidebar {
+  width: 220px;
+  background: #232733;
+  padding: 32px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff99;
+  margin-bottom: 40px;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.sidebar nav ul li {
+  padding: 16px 32px;
+  color: #b0b3c6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background: #181c23;
+  color: #fff;
+}
+.main-content {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.search {
+  background: #232733;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #fff;
+  margin: 0 16px;
+}
+.profile {
+  width: 40px;
+  height: 40px;
+  background: #00ff99;
+  border-radius: 50%;
+}
+.stats-row {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0 0 0;
+}
+.stat-card {
+  background: #232733;
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 1rem;
+  color: #b0b3c6;
+}
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.overview-row {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0;
+}
+.overview-chart {
+  background: #232733;
+  border-radius: 16px;
+  padding: 24px;
+  flex: 2;
+  min-width: 0;
+}
+.overview-header {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+.recent-transactions {
+  background: #232733;
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  min-width: 250px;
+}
+.recent-header {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.see-all {
+  color: #00ff99;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.recent-transactions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.recent-transactions li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.recent-transactions img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.tx-type {
+  font-size: 0.85rem;
+  color: #b0b3c6;
+}
+.tx-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.tx-amount {
+  margin-left: auto;
+  font-weight: bold;
+}
+.tx-amount.positive {
+  color: #00ff99;
+}
+.tx-amount.negative {
+  color: #ffaa00;
+}
+.transactions-section {
+  background: #232733;
+  border-radius: 16px;
+  padding: 24px;
+}
+.transactions-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.transactions-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.date-range {
+  margin-left: auto;
+  color: #b0b3c6;
+  font-size: 0.95rem;
+}
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+.transactions-table th,
+.transactions-table td {
+  padding: 12px 8px;
+  text-align: left;
+}
+.transactions-table th {
+  background: #232733;
+  color: #b0b3c6;
+  font-weight: 500;
+}
+.transactions-table tr {
+  border-bottom: 1px solid #232733;
+}
+.transactions-table tr:last-child {
+  border-bottom: none;
+}
+.tx-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.positive {
+  color: #00ff99;
+}
+.negative {
+  color: #ffaa00;
+}
+.status-chip {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-block;
+}
+.status-chip.completed {
+  background: #00ff99;
+  color: #181c23;
+}
+.status-chip.pending {
+  background: #ffaa00;
+  color: #181c23;
+}
